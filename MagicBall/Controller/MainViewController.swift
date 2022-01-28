@@ -13,8 +13,16 @@ class MainViewController: UIViewController {
     
     var api = APIRequest()
     var responder: Answer?
+    private var userData = UserDefaultAnswers()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == segueIdentifier else { return }
+        guard let destination = segue.destination as? SettingsViewController else { return }
+        destination.text = responder?.magic.answer
     }
 
     override var canBecomeFirstResponder: Bool {
@@ -27,7 +35,7 @@ class MainViewController: UIViewController {
         self.api.getAnswer(completion:  { [weak self] answer in
                 self?.responder = answer
                                DispatchQueue.main.async {
-                                self?.ballLabel.text = answer?.magic.answer ?? ""
+                                self?.ballLabel.text = answer?.magic.answer ?? self?.userData.defaultAnswers.randomElement()
             }
         })
     }

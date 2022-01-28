@@ -7,23 +7,42 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
+    
+    @IBOutlet private weak var saveAnswerButton: UIButton!
+    @IBOutlet private weak var answerLabel: UILabel!
+    @IBOutlet private weak var userAnswerTextField: UITextField!
+    @IBOutlet private weak var saveUserAnswerButton: UIButton!
+    
+    private var userDefaultData = UserDefaultAnswers()
+    private weak var mainVC: MainViewController?
+    var text: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        answerLabel.text = updateText()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateText() -> String? {
+        if let text2 = mainVC?.ballLabel.text {
+            text = text2
+        }
+        return text
     }
-    */
-
+    @IBAction func saveLastAnswer(_ sender: Any) {
+        if let text = text {
+            userDefaultData.saveAnswers(newAnswer: text)
+        }
+        answerLabel.text = ""
+    }
+    
+    @IBAction func saveYourAnswer(_ sender: Any) {
+        if let text = userAnswerTextField.text {
+            userDefaultData.saveAnswers(newAnswer: text)
+        }
+        userAnswerTextField.text = ""
+    }
 }
+
+
+

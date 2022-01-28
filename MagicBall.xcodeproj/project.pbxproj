@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		043B4A6527A32F4E008A8635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A6427A32F4E008A8635 /* AppDelegate.swift */; };
-		043B4A6927A32F4E008A8635 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A6827A32F4E008A8635 /* ViewController.swift */; };
+		043B4A6927A32F4E008A8635 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A6827A32F4E008A8635 /* MainViewController.swift */; };
 		043B4A6C27A32F4E008A8635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B4A6A27A32F4E008A8635 /* Main.storyboard */; };
 		043B4A6E27A32F5D008A8635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043B4A6D27A32F5D008A8635 /* Assets.xcassets */; };
 		043B4A7127A32F5D008A8635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B4A6F27A32F5D008A8635 /* LaunchScreen.storyboard */; };
+		043B4A8027A33D38008A8635 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A7F27A33D38008A8635 /* APIRequest.swift */; };
+		043B4A8327A33DC3008A8635 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A8227A33DC3008A8635 /* Magic.swift */; };
+		043B4A8627A33E42008A8635 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A8527A33E42008A8635 /* Constants.swift */; };
+		043B4A8927A3CE72008A8635 /* UserDefaultAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A8827A3CE71008A8635 /* UserDefaultAnswers.swift */; };
+		043B4A8D27A3CF07008A8635 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4A8C27A3CF07008A8635 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		043B4A6127A32F4E008A8635 /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043B4A6427A32F4E008A8635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		043B4A6827A32F4E008A8635 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		043B4A6827A32F4E008A8635 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		043B4A6B27A32F4E008A8635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043B4A6D27A32F5D008A8635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043B4A7027A32F5D008A8635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043B4A7227A32F5D008A8635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043B4A7F27A33D38008A8635 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		043B4A8227A33DC3008A8635 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
+		043B4A8527A33E42008A8635 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		043B4A8827A3CE71008A8635 /* UserDefaultAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultAnswers.swift; sourceTree = "<group>"; };
+		043B4A8C27A3CF07008A8635 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				043B4A6427A32F4E008A8635 /* AppDelegate.swift */,
-				043B4A6827A32F4E008A8635 /* ViewController.swift */,
-				043B4A6A27A32F4E008A8635 /* Main.storyboard */,
+				043B4A8B27A3CEC9008A8635 /* Controller */,
+				043B4A7B27A33392008A8635 /* View */,
+				043B4A7E27A33CBF008A8635 /* Model */,
 				043B4A6D27A32F5D008A8635 /* Assets.xcassets */,
 				043B4A6F27A32F5D008A8635 /* LaunchScreen.storyboard */,
 				043B4A7227A32F5D008A8635 /* Info.plist */,
 			);
 			path = MagicBall;
+			sourceTree = "<group>";
+		};
+		043B4A7B27A33392008A8635 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				043B4A6A27A32F4E008A8635 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		043B4A7E27A33CBF008A8635 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				043B4A7F27A33D38008A8635 /* APIRequest.swift */,
+				043B4A8527A33E42008A8635 /* Constants.swift */,
+				043B4A8227A33DC3008A8635 /* Magic.swift */,
+				043B4A8827A3CE71008A8635 /* UserDefaultAnswers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		043B4A8B27A3CEC9008A8635 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				043B4A6827A32F4E008A8635 /* MainViewController.swift */,
+				043B4A8C27A3CF07008A8635 /* SettingsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043B4A6927A32F4E008A8635 /* ViewController.swift in Sources */,
+				043B4A8627A33E42008A8635 /* Constants.swift in Sources */,
+				043B4A6927A32F4E008A8635 /* MainViewController.swift in Sources */,
+				043B4A8D27A3CF07008A8635 /* SettingsViewController.swift in Sources */,
+				043B4A8927A3CE72008A8635 /* UserDefaultAnswers.swift in Sources */,
+				043B4A8027A33D38008A8635 /* APIRequest.swift in Sources */,
 				043B4A6527A32F4E008A8635 /* AppDelegate.swift in Sources */,
+				043B4A8327A33DC3008A8635 /* Magic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

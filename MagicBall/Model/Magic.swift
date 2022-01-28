@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Answer: Codable  {
+    let magic: Magic
+}
+
+struct Magic: Codable {
+    let answer: String
+}
+
