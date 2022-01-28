@@ -60,7 +60,6 @@
         <!--Settings-->
         <scene sceneID="Yup-Sv-SiG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1UQ-Pp-b1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="csD-4b-3Wp" customClass="SettingsViewController" customModule="MagicBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyU-Ym-l95">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -90,7 +89,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-Bt-07T">
                                 <rect key="frame" x="50" y="421" width="314" height="30"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.50196078430000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Save youre answer">
+                                <state key="normal" title="Save your answer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -124,13 +123,13 @@
                         <outlet property="userAnswerTextField" destination="RkT-Nq-qnf" id="Qs5-AA-HdT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UQ-Pp-b1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="462" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tUv-pP-bzO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJ1-XK-GFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="c8y-Vq-0e4" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9O7-XW-ot5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -140,6 +139,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GDc-os-Y17"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJ1-XK-GFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1086" y="38"/>
         </scene>
